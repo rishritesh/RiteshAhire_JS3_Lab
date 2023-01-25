@@ -45,15 +45,17 @@ function getWeatherInfo(cityName) {
 function displayResults(data) {
     console.log("Display to be updated");
     document.querySelector(".city").innerText = `${data.name},${data.sys.country}`;
-    temp=Math.round(data.main.temp);
+    temp = Math.round(data.main.temp);
     document.querySelector(".temp").innerText = `${temp} °c`;
     document.querySelector(".weather").innerText = `${data.weather[0].main}`;
-    temp_max=Math.round(data.main.temp_max);
-    temp_min=Math.round(data.main.temp_min);
+    temp_max = Math.round(data.main.temp_max);
+    temp_min = Math.round(data.main.temp_min);
     document.querySelector(".hi-low").innerText = `${temp_max} °c / ${temp_min} °c`;
     let now = new Date();
     let date = document.querySelector('.location .date');
     date.innerText = dateBuilder(now);
+
+
 
 }
 
